@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import OpportunitySection from './components/OpportunitySection';
+import MarketingAISection from './components/MarketingAISection';
 import MethodOrbitaSection from './components/MethodOrbitaSection';
 import HowItWorksSection from './components/HowItWorksSection';
 import DeliverablesSection from './components/DeliverablesSection';
@@ -26,6 +27,7 @@ function App() {
       <HeroSection onOpenDiagnostic={() => setIsDiagnosticOpen(true)} />
       <ProblemSection />
       <OpportunitySection />
+      <MarketingAISection />
       <MethodOrbitaSection />
       <HowItWorksSection />
       <DeliverablesSection />

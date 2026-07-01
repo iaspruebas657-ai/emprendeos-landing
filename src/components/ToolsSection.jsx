@@ -2,12 +2,12 @@ import React from 'react';
 
 const ToolsSection = () => {
   const tools = [
-    { icon: "📊", title: "Panel de organización", desc: "Todo tu negocio en una sola pantalla para que no te pierdas." },
-    { icon: "👥", title: "Control de clientes", desc: "Sigue cada conversación y asegúrate de no perder ninguna venta." },
-    { icon: "💻", title: "Página para vender", desc: "Crea tu propia página de forma sencilla para recibir a tus clientes." },
-    { icon: "🤖", title: "Creador de contenido con IA", desc: "Escribe textos y publicaciones sin quedarte en blanco." },
-    { icon: "🔎", title: "Radar de productos y proveedores", desc: "Encuentra oportunidades reales si estás empezando desde cero." },
-    { icon: "📚", title: "Clases paso a paso", desc: "Aprende lo que necesitas justo en el momento en que lo aplicas." }
+    { icon: "🤖", title: "Ideas de contenido con IA", desc: "No te quedes en blanco. Genera ideas para publicar rápidamente." },
+    { icon: "💬", title: "Mensajes de venta para WhatsApp", desc: "Aprende qué responder para que tus interesados no te dejen en visto." },
+    { icon: "📢", title: "Creador de anuncios simples", desc: "Lanza tus primeras promociones sin ser un experto en publicidad." },
+    { icon: "💻", title: "Página para mostrar tu producto", desc: "Crea tu propia página web sencilla para recibir a tus clientes." },
+    { icon: "👥", title: "Organizador de clientes interesados", desc: "Lleva el control de cada persona que te escribe para no perder ventas." },
+    { icon: "🗺️", title: "Guía paso a paso de marketing", desc: "Sigue una ruta clara para saber exactamente qué hacer cada día." }
   ];
 
   return (

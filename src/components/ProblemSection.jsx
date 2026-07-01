@@ -12,23 +12,23 @@ const ProblemSection = () => {
           <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left', fontSize: '18px', display: 'flex', flexDirection: 'column', gap: '16px', color: 'var(--text-muted)' }}>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
-              No sabes qué vender ni por dónde empezar.
+              No sabes qué vender ni por dónde empezar tu negocio.
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
-              Ya tienes producto, pero no vendes lo suficiente.
+              No sabes cómo atraer clientes ni qué publicar en redes.
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
-              Publicas contenido, pero no llegan clientes reales.
+              Ves que todos hablan de inteligencia artificial, pero no sabes cómo usarla.
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
-              Tienes interesados, pero no haces un buen seguimiento.
+              Quieres vender más, pero no sabes crear mensajes, anuncios o promociones.
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
-              Sientes que tu negocio está desordenado y te quita todo el tiempo.
+              Tienes un buen producto, pero no sabes cómo hacerlo visible.
             </li>
           </ul>
 

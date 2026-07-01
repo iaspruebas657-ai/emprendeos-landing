@@ -13,10 +13,10 @@ const HeroSection = ({ onOpenDiagnostic }) => {
             Empieza hoy. Primera clase gratis.
           </div>
           <h1 style={{ marginBottom: '24px' }}>
-            Crea o haz crecer tu negocio paso a paso con una clase gratis.
+            Crea o haz crecer tu negocio paso a paso con marketing, inteligencia artificial y una clase gratis.
           </h1>
           <p className="text-muted" style={{ fontSize: '18px', marginBottom: '40px', fontWeight: '500' }}>
-            Si no sabes qué vender, te ayudamos a encontrar una oportunidad. Si ya tienes un producto o negocio, te ayudamos a conseguir más clientes y vender mejor. Aprende con una guía práctica y acompañamiento para organizarte.
+            Te ayudamos a encontrar qué vender, atraer clientes, crear contenido, organizar tus ventas y usar inteligencia artificial de forma simple, aunque estés empezando desde cero o ya tengas un negocio.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}>
             <a 
@@ -34,7 +34,7 @@ const HeroSection = ({ onOpenDiagnostic }) => {
           </div>
         </div>
 
-        {/* Right Dashboard Mockup (Simplified copy) */}
+        {/* Right Dashboard Mockup */}
         <div style={{ backgroundColor: '#181922', borderRadius: '16px', border: '1px solid #333', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
           {/* Mac window controls */}
           <div style={{ backgroundColor: '#22232E', padding: '12px 16px', display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -85,7 +85,7 @@ const HeroSection = ({ onOpenDiagnostic }) => {
               <div style={{ fontWeight: '700', marginBottom: '8px', fontSize: '14px' }}>Acción de Hoy (Día 7)</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{ width: '16px', height: '16px', border: '2px solid var(--text-muted)', borderRadius: '4px' }}></div>
-                <span className="text-muted" style={{ fontSize: '14px' }}>Responder a 3 clientes nuevos</span>
+                <span className="text-muted" style={{ fontSize: '14px' }}>Generar idea de contenido con IA</span>
               </div>
             </div>
           </div>
