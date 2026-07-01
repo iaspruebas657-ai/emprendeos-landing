@@ -2,27 +2,42 @@ import React from 'react';
 
 const ProblemSection = () => {
   return (
-    <section className="section bg-deep">
-      <div className="container">
-        <h2 className="text-red" style={{ textAlign: 'center' }}>LA DURA VERDAD</h2>
-        <div style={{ maxWidth: '600px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {[
-            'No sabes qué vender',
-            'Compras cursos pero no vendes',
-            'No tienes clientes ni visibilidad',
-            'No tienes sistema de ejecución',
-            'Empiezas motivado y abandonas'
-          ].map((dolor, idx) => (
-            <div key={idx} className="card" style={{ border: '1px solid rgba(255, 59, 48, 0.3)', padding: '24px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <span style={{ fontSize: '24px' }}>❌</span>
-              <span style={{ fontSize: '20px', fontWeight: '500' }}>{dolor}</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: '48px' }}>
-          <p style={{ fontSize: '24px', fontWeight: '700', color: 'var(--text-pure)' }}>
-            👉 Estás aprendiendo, pero no estás construyendo ingresos reales.
-          </p>
+    <section id="problem" className="section bg-section">
+      <div className="container" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+        <h2 style={{ marginBottom: '48px', color: 'var(--accent-red)' }}>¿TE SIENTES ESTANCADO?</h2>
+        
+        <div style={{ backgroundColor: 'var(--bg-deep)', padding: '40px', borderRadius: '16px', border: '1px solid #333' }}>
+          <p style={{ fontSize: '24px', marginBottom: '32px', fontWeight: '600' }}>La mayoría de emprendedores no avanza porque:</p>
+          
+          <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left', fontSize: '18px', display: 'flex', flexDirection: 'column', gap: '16px', color: 'var(--text-muted)' }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
+              No sabes qué vender ni por dónde empezar.
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
+              Ya tienes producto, pero no vendes lo suficiente.
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
+              Publicas contenido, pero no llegan clientes reales.
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
+              Tienes interesados, pero no haces un buen seguimiento.
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <span style={{ color: 'var(--accent-red)', fontWeight: 'bold' }}>✕</span> 
+              Sientes que tu negocio está desordenado y te quita todo el tiempo.
+            </li>
+          </ul>
+
+          <div style={{ marginTop: '40px', paddingTop: '32px', borderTop: '1px solid #333' }}>
+            <p style={{ fontSize: '20px', fontWeight: '700' }}>El resultado es siempre el mismo:</p>
+            <p className="text-muted" style={{ fontSize: '18px', marginTop: '8px' }}>
+              Mucha motivación, cero claridad y pocas ventas.
+            </p>
+          </div>
         </div>
       </div>
     </section>

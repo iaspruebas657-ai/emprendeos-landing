@@ -5,36 +5,36 @@ import { CTA_LINKS } from '../config/constants';
 const questions = [
   {
     id: 1,
-    title: "¿En qué etapa estás ahora?",
+    title: "¿En qué situación estás?",
     options: [
-      "No tengo producto ni negocio todavía",
-      "Tengo una idea, pero no sé si se venderá",
-      "Ya tengo producto o servicio",
-      "Ya vendo, pero quiero ordenar y escalar"
+      "Estoy empezando desde cero",
+      "Tengo una idea de negocio",
+      "Ya tengo un producto o servicio",
+      "Ya tengo un negocio y quiero vender más"
     ]
   },
   {
     id: 2,
-    title: "¿Cuál es tu mayor bloqueo hoy?",
+    title: "¿Qué necesitas ahora?",
     options: [
-      "No sé qué vender",
-      "No sé cómo conseguir clientes",
-      "No sé crear contenido o anuncios",
-      "No tengo una página o tienda",
-      "No hago seguimiento a mis prospectos",
-      "Estoy desordenado y no avanzo"
+      "Saber qué vender",
+      "Conseguir más clientes",
+      "Crear contenido para mi negocio",
+      "Organizar mejor mis ventas",
+      "Vender por internet",
+      "Hacer crecer mi negocio"
     ]
   },
   {
     id: 3,
-    title: "¿Cuál es tu objetivo principal en los próximos 30 días?",
+    title: "¿Cuál es tu meta principal?",
     options: [
-      "Encontrar un producto para vender",
-      "Validar una idea de negocio",
-      "Crear mi oferta y landing",
-      "Conseguir mis primeros clientes",
-      "Organizar mis ventas con CRM",
-      "Escalar un negocio que ya tengo"
+      "Empezar mi primer negocio",
+      "Validar una idea",
+      "Vender mi producto",
+      "Conseguir más clientes",
+      "Ordenar mi negocio",
+      "Crecer más rápido"
     ]
   }
 ];
@@ -48,52 +48,13 @@ const DiagnosticModal = ({ isOpen, onClose }) => {
 
   const handleOptionSelect = (option) => {
     setAnswers({ ...answers, [step]: option });
-    if (step < questions.length - 1) {
-      setStep(step + 1);
-    } else {
-      setStep(step + 1);
-    }
+    setStep(step + 1);
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     trackEvent('submit_diagnostic', { answers, formData });
     setStep(step + 1);
-  };
-
-  const getRecommendation = () => {
-    const stage = answers[0];
-    if (stage === "No tengo producto ni negocio todavía") {
-      return {
-        title: "Tu ruta recomendada: Descubrir + Validar + Crear Oferta",
-        desc: "Empieza encontrando una oportunidad real, valida si existe demanda y crea tu primera oferta antes de invertir dinero.",
-        ctaText: "Acceder a la clase gratis",
-        ctaLink: CTA_LINKS.freeClass
-      };
-    }
-    if (stage === "Tengo una idea, pero no sé si se venderá") {
-      return {
-        title: "Tu ruta recomendada: Validar + Crear Landing + Captar Prospectos",
-        desc: "Antes de comprar inventario o invertir fuerte, valida si el mercado realmente quiere lo que vas a vender.",
-        ctaText: "Quiero entrar al reto",
-        ctaLink: CTA_LINKS.checkout
-      };
-    }
-    if (stage === "Ya tengo producto o servicio") {
-      return {
-        title: "Tu ruta recomendada: Oferta + Landing + Contenido + CRM",
-        desc: "Convierte tu producto en una oferta más clara, crea una página de venta y empieza a dar seguimiento a tus prospectos.",
-        ctaText: "Quiero entrar al reto",
-        ctaLink: CTA_LINKS.checkout
-      };
-    }
-    // "Ya vendo, pero quiero ordenar y escalar"
-    return {
-      title: "Tu ruta recomendada: CRM + Seguimiento + Automatización + Escala",
-      desc: "Ordena tus prospectos, mejora tu seguimiento comercial y convierte más conversaciones en ventas.",
-      ctaText: "Quiero entrar al reto",
-      ctaLink: CTA_LINKS.checkout
-    };
   };
 
   return (
@@ -117,34 +78,27 @@ const DiagnosticModal = ({ isOpen, onClose }) => {
 
         {step === questions.length && (
           <div>
-            <h3 style={{ fontSize: '24px', marginBottom: '16px', color: 'var(--accent-yellow)' }}>¡Diagnóstico casi listo!</h3>
-            <p className="text-muted" style={{ marginBottom: '24px' }}>Ingresa tus datos para ver tu ruta recomendada y guardar tu perfil.</p>
+            <h3 style={{ fontSize: '24px', marginBottom: '16px', color: 'var(--accent-yellow)' }}>¡Casi listo!</h3>
+            <p className="text-muted" style={{ marginBottom: '24px' }}>Ingresa tus datos para prepararte tu clase gratis adaptada a tu caso.</p>
             <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <input type="text" placeholder="Nombre completo" required value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} style={{ padding: '16px', borderRadius: '4px', border: '1px solid #333', backgroundColor: '#111', color: '#fff', fontSize: '16px' }} />
               <input type="tel" placeholder="WhatsApp (Ej: +51...)" required value={formData.whatsapp} onChange={e => setFormData({...formData, whatsapp: e.target.value})} style={{ padding: '16px', borderRadius: '4px', border: '1px solid #333', backgroundColor: '#111', color: '#fff', fontSize: '16px' }} />
               <input type="email" placeholder="Correo electrónico" required value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} style={{ padding: '16px', borderRadius: '4px', border: '1px solid #333', backgroundColor: '#111', color: '#fff', fontSize: '16px' }} />
-              <button type="submit" className="btn btn-primary" style={{ marginTop: '8px' }}>Ver mi ruta recomendada</button>
+              <button type="submit" className="btn btn-primary" style={{ marginTop: '8px' }}>Ver resultado</button>
             </form>
           </div>
         )}
 
         {step > questions.length && (
           <div style={{ textAlign: 'center' }}>
-            {(() => {
-              const rec = getRecommendation();
-              return (
-                <>
-                  <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎯</div>
-                  <h3 style={{ fontSize: '24px', marginBottom: '16px', color: 'var(--accent-yellow)' }}>{rec.title}</h3>
-                  <p style={{ fontSize: '18px', marginBottom: '32px', color: 'var(--text-pure)' }}>{rec.desc}</p>
-                  <a href={rec.ctaLink} onClick={() => {
-                      trackEvent(rec.ctaLink === CTA_LINKS.freeClass ? 'click_free_class' : 'click_cta_offer');
-                    }} className="btn btn-primary" style={{ width: '100%' }}>
-                    {rec.ctaText}
-                  </a>
-                </>
-              );
-            })()}
+            <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎯</div>
+            <h3 style={{ fontSize: '24px', marginBottom: '16px', color: 'var(--accent-yellow)' }}>Todo listo para avanzar</h3>
+            <p style={{ fontSize: '18px', marginBottom: '32px', color: 'var(--text-pure)' }}>Tenemos una clase gratuita perfecta para tu nivel actual. Habla con nosotros por WhatsApp para enviarte el acceso.</p>
+            <a href={CTA_LINKS.freeClass} onClick={() => {
+                trackEvent('click_free_class');
+              }} className="btn btn-primary" style={{ width: '100%' }}>
+              Recibir mi clase gratis por WhatsApp
+            </a>
           </div>
         )}
       </div>

@@ -1,25 +1,26 @@
 import React from 'react';
 
 const ToolsSection = () => {
+  const tools = [
+    { icon: "📊", title: "Panel de organización", desc: "Todo tu negocio en una sola pantalla para que no te pierdas." },
+    { icon: "👥", title: "Control de clientes", desc: "Sigue cada conversación y asegúrate de no perder ninguna venta." },
+    { icon: "💻", title: "Página para vender", desc: "Crea tu propia página de forma sencilla para recibir a tus clientes." },
+    { icon: "🤖", title: "Creador de contenido con IA", desc: "Escribe textos y publicaciones sin quedarte en blanco." },
+    { icon: "🔎", title: "Radar de productos y proveedores", desc: "Encuentra oportunidades reales si estás empezando desde cero." },
+    { icon: "📚", title: "Clases paso a paso", desc: "Aprende lo que necesitas justo en el momento en que lo aplicas." }
+  ];
+
   return (
-    <section className="section bg-section">
+    <section id="tools" className="section bg-deep">
       <div className="container">
-        <h2 className="text-pure" style={{ textAlign: 'center', marginBottom: '64px' }}>NO SON FUNCIONES. ES TU SISTEMA OPERATIVO.</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '64px' }}>HERRAMIENTAS SIMPLES</h2>
         
-        <div className="grid grid-2" style={{ gap: '32px' }}>
-          {[
-            { title: 'Productividad', desc: 'El sistema operativo que organiza tu ejecución diaria.' },
-            { title: 'CRM', desc: 'El núcleo de ventas para que ningún cliente se escape.' },
-            { title: 'Radar Proveedores', desc: 'Tu ventaja competitiva real para encontrar qué vender.' },
-            { title: 'Inteligencia Artificial', desc: 'Tu acelerador de contenido y campañas publicitarias.' },
-            { title: 'Landing Builder', desc: 'Tu máquina de monetización y presencia digital.' },
-            { title: 'Academia', desc: 'La inteligencia estratégica detrás de cada clic.' }
-          ].map((item, idx) => (
-            <div key={idx} className="card" style={{ transition: 'all 0.3s ease', cursor: 'default' }}
-                 onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 215, 0, 0.3)'; }}
-                 onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)'; }}>
-              <h3 style={{ fontSize: '24px', marginBottom: '8px' }}>{item.title}</h3>
-              <p className="text-muted" style={{ fontSize: '18px' }}>{item.desc}</p>
+        <div className="grid grid-3" style={{ gap: '24px' }}>
+          {tools.map((tool, index) => (
+            <div key={index} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ fontSize: '40px' }}>{tool.icon}</div>
+              <h3 style={{ fontSize: '20px' }}>{tool.title}</h3>
+              <p className="text-muted">{tool.desc}</p>
             </div>
           ))}
         </div>
