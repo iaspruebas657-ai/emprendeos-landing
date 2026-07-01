@@ -2,11 +2,12 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header style={{ 
+    <header className="header-compact" style={{ 
       position: 'relative', 
       width: '100%', 
-      padding: '24px 0',
-      marginBottom: '10px',
+      paddingTop: '28px',
+      paddingBottom: '20px',
+      marginBottom: '0',
       zIndex: 20,
       backgroundColor: 'transparent'
     }}>
@@ -18,6 +19,7 @@ const Header = () => {
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 768px) {
           .text-logo { font-size: 22px !important; }
+          .header-compact { padding-top: 24px !important; padding-bottom: 14px !important; }
         }
       `}} />
     </header>

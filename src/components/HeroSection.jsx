@@ -4,12 +4,12 @@ import { CTA_LINKS } from '../config/constants';
 
 const HeroSection = ({ onOpenDiagnostic }) => {
   return (
-    <section className="section bg-deep" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+    <section className="bg-deep hero-compact" style={{ paddingTop: '20px', paddingBottom: '80px', minHeight: 'calc(100vh - 100px)' }}>
       <div className="container grid grid-2 fade-in" style={{ alignItems: 'center', gap: '4rem' }}>
         
         {/* Left Copy */}
-        <div>
-          <div style={{ display: 'inline-block', backgroundColor: 'rgba(255, 215, 0, 0.1)', border: '1px solid var(--accent-yellow)', color: 'var(--accent-yellow)', padding: '6px 16px', borderRadius: '50px', fontWeight: '700', fontSize: '14px', marginBottom: '24px', textTransform: 'uppercase' }}>
+        <div className="hero-content">
+          <div className="hero-badge" style={{ display: 'inline-block', backgroundColor: 'rgba(255, 215, 0, 0.1)', border: '1px solid var(--accent-yellow)', color: 'var(--accent-yellow)', padding: '6px 16px', borderRadius: '50px', fontWeight: '700', fontSize: '14px', marginBottom: '28px', marginTop: '20px', textTransform: 'uppercase' }}>
             Empieza hoy. Primera clase gratis.
           </div>
           <h1 style={{ marginBottom: '24px' }}>
@@ -92,6 +92,13 @@ const HeroSection = ({ onOpenDiagnostic }) => {
         </div>
 
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 768px) {
+          .hero-compact { padding-top: 10px !important; }
+          .hero-content { margin-top: 0 !important; padding-top: 0 !important; }
+          .hero-badge { margin-top: 12px !important; margin-bottom: 24px !important; }
+        }
+      `}} />
     </section>
   );
 };
