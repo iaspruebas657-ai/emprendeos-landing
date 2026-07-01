@@ -12,7 +12,7 @@ const Footer = () => {
         <img 
           src="/logo-kaisen.png" 
           alt="Logo Kaisen - educación digital y crecimiento de negocios" 
-          style={{ height: '60px', width: 'auto', filter: 'brightness(2) contrast(1.2)' }}
+          style={{ height: '90px', width: 'auto', filter: 'drop-shadow(1px 1px 0px rgba(255,255,255,0.7)) drop-shadow(-1px -1px 0px rgba(255,255,255,0.7)) drop-shadow(1px -1px 0px rgba(255,255,255,0.7)) drop-shadow(-1px 1px 0px rgba(255,255,255,0.7))' }}
         />
         <div>
           <div style={{ fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
