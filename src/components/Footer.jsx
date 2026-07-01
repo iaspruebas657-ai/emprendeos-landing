@@ -12,7 +12,7 @@ const Footer = () => {
         <img 
           src="/logo-kaisen.png" 
           alt="Logo Kaisen - educación digital y crecimiento de negocios" 
-          style={{ height: '50px', width: 'auto', opacity: 0.9 }}
+          style={{ height: '60px', width: 'auto', filter: 'brightness(2) contrast(1.2)' }}
         />
         <div>
           <div style={{ fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
@@ -21,8 +21,8 @@ const Footer = () => {
           <div style={{ color: 'var(--accent-yellow)', fontWeight: '600', marginBottom: '16px' }}>
             Digital Education & Business Growth
           </div>
-          <p className="text-muted" style={{ maxWidth: '400px', margin: '0 auto', fontSize: '14px' }}>
-            Crea o haz crecer tu negocio paso a paso con marketing e inteligencia artificial.
+          <p className="text-muted" style={{ maxWidth: '500px', margin: '0 auto', fontSize: '15px' }}>
+            Marketing, inteligencia artificial y educación práctica para crear o hacer crecer tu negocio.
           </p>
         </div>
         <div style={{ marginTop: '32px', fontSize: '12px', color: '#555' }}>

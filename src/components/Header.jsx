@@ -11,11 +11,11 @@ const Header = () => {
       zIndex: 50,
       backgroundColor: 'transparent'
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <img 
           src="/logo-kaisen.png" 
           alt="Logo Kaisen - educación digital y crecimiento de negocios" 
-          style={{ height: '42px', width: 'auto', display: 'block' }}
+          style={{ height: '40px', width: 'auto', display: 'block', filter: 'brightness(2) contrast(1.2) drop-shadow(0 0 12px rgba(255,255,255,0.1))' }}
           className="logo-header"
         />
       </div>
