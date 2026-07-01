@@ -9,6 +9,18 @@ const HeroSection = ({ onOpenDiagnostic }) => {
         
         {/* Left Copy */}
         <div>
+          <img 
+            src="/logo-kaisen.png" 
+            alt="Logo Kaisen - educación digital y crecimiento de negocios" 
+            className="logo-hero"
+            style={{ display: 'block', maxWidth: '220px', height: 'auto', marginBottom: '24px' }}
+          />
+          <style dangerouslySetInnerHTML={{__html: `
+            @media (max-width: 768px) {
+              .logo-hero { max-width: 170px !important; }
+            }
+          `}} />
+          
           <div style={{ display: 'inline-block', backgroundColor: 'rgba(255, 215, 0, 0.1)', border: '1px solid var(--accent-yellow)', color: 'var(--accent-yellow)', padding: '6px 16px', borderRadius: '50px', fontWeight: '700', fontSize: '14px', marginBottom: '24px', textTransform: 'uppercase' }}>
             Empieza hoy. Primera clase gratis.
           </div>

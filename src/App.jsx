@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import OpportunitySection from './components/OpportunitySection';
@@ -12,6 +13,7 @@ import OfferSection from './components/OfferSection';
 import UrgencySection from './components/UrgencySection';
 import FAQSection from './components/FAQSection';
 import FinalCTASection from './components/FinalCTASection';
+import Footer from './components/Footer';
 import DiagnosticModal from './components/DiagnosticModal';
 import { useScrollTracking } from './hooks/useScrollTracking';
 
@@ -23,6 +25,7 @@ function App() {
 
   return (
     <div style={{ backgroundColor: 'var(--bg-deep)', minHeight: '100vh', position: 'relative' }}>
+      <Header />
       <DiagnosticModal isOpen={isDiagnosticOpen} onClose={() => setIsDiagnosticOpen(false)} />
       <HeroSection onOpenDiagnostic={() => setIsDiagnosticOpen(true)} />
       <ProblemSection />
@@ -37,6 +40,7 @@ function App() {
       <UrgencySection />
       <FAQSection />
       <FinalCTASection />
+      <Footer />
     </div>
   );
 }
