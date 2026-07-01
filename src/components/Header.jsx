@@ -10,22 +10,26 @@ const Header = () => {
       zIndex: 20,
       backgroundColor: 'transparent'
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <img 
           src="/logo-kaisen.png" 
-          alt="Logo Kaisen - educación digital y crecimiento de negocios" 
+          alt="Ícono Kaisen" 
           style={{ 
-            height: '110px', 
-            width: 'auto', 
-            display: 'block', 
-            filter: 'drop-shadow(1px 1px 0px rgba(255,255,255,0.7)) drop-shadow(-1px -1px 0px rgba(255,255,255,0.7)) drop-shadow(1px -1px 0px rgba(255,255,255,0.7)) drop-shadow(-1px 1px 0px rgba(255,255,255,0.7))' 
+            width: '45px', 
+            height: '45px', 
+            objectFit: 'cover',
+            objectPosition: 'top center',
+            display: 'block'
           }}
-          className="logo-header"
+          className="logo-header-img"
         />
+        <span style={{ fontSize: '26px', fontWeight: '800', color: '#ffffff', letterSpacing: '-0.5px' }}>
+          Kaisen
+        </span>
       </div>
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 768px) {
-          .logo-header { height: 80px !important; }
+          .logo-header-img { width: 36px !important; height: 36px !important; }
         }
       `}} />
     </header>
