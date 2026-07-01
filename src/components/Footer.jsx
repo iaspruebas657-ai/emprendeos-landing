@@ -9,15 +9,10 @@ const Footer = () => {
       textAlign: 'center'
     }}>
       <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-        <img 
-          src="/logo-kaisen.png" 
-          alt="Logo Kaisen - educación digital y crecimiento de negocios" 
-          style={{ height: '90px', width: 'auto', filter: 'brightness(1.5) drop-shadow(0 0 10px rgba(255,255,255,0.15))' }}
-        />
+        <div style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-0.5px', color: '#ffffff', display: 'flex', alignItems: 'center', userSelect: 'none' }}>
+          EmprendeOS<span style={{ color: 'var(--text-muted)', margin: '0 8px', fontWeight: '400' }}>|</span><span style={{ color: 'var(--accent-yellow)', fontWeight: '900' }}>Kaisen</span>
+        </div>
         <div>
-          <div style={{ fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
-            Kaisen
-          </div>
           <div style={{ color: 'var(--accent-yellow)', fontWeight: '600', marginBottom: '16px' }}>
             Digital Education & Business Growth
           </div>

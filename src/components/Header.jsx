@@ -10,26 +10,14 @@ const Header = () => {
       zIndex: 20,
       backgroundColor: 'transparent'
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <img 
-          src="/logo-kaisen.png" 
-          alt="Ícono Kaisen" 
-          style={{ 
-            width: '45px', 
-            height: '45px', 
-            objectFit: 'cover',
-            objectPosition: 'top center',
-            display: 'block'
-          }}
-          className="logo-header-img"
-        />
-        <span style={{ fontSize: '26px', fontWeight: '800', color: '#ffffff', letterSpacing: '-0.5px' }}>
-          Kaisen
-        </span>
+      <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="text-logo" style={{ fontSize: '26px', fontWeight: '800', letterSpacing: '-0.5px', color: '#ffffff', display: 'flex', alignItems: 'center', userSelect: 'none' }}>
+          EmprendeOS<span style={{ color: 'var(--text-muted)', margin: '0 6px', fontWeight: '400' }}>|</span><span style={{ color: 'var(--accent-yellow)', fontWeight: '900' }}>Kaisen</span>
+        </div>
       </div>
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 768px) {
-          .logo-header-img { width: 36px !important; height: 36px !important; }
+          .text-logo { font-size: 22px !important; }
         }
       `}} />
     </header>
